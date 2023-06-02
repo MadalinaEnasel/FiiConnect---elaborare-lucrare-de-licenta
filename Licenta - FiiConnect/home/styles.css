@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #348ccc;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.header-profile {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.header-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-chats {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-chats img {
+  width: 25%;
+  margin-right: 5px;
+}
+
+.header-chats span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+  height: 50%;
+  margin: 0 auto;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+  font-size: 12px;
+}
+
+thead th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tbody td:first-child {
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.highlight {
+  background-color: #348dcc3e;
+}
+
+.highlight2 {
+  background-color: #348dcc2b;
+}
+
+.columns-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px auto;
+  width: 85%;
+}
+
+.column {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.column.announcements {
+  background-color: transparent;
+  margin-left: 10%;
+}
+
+.column.reminders {
+  background-color: rgba(52, 140, 204, 0.2);
+  padding: 10px;
+  width: 70%;
+  height: fit-content;
+  margin: 0 auto;
+}
+
+.column h2 {
+  color: #348ccc;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.column p {
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.markerless-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.markerless-list li {
+  margin-bottom: 10px;
+  font-weight: 200;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .header-logo {
+    font-size: 24px;
+  }
+
+  .header-chats span {
+    font-size: 14px;
+  }
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

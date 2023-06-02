@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chats Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="header-logo"><a href="../home/index.html">
+        <img src="../pictures/logo.png" alt="Logo" style="width: 27px; height: 27px;">
+    </a>
+      </div>
+      <div class="header-logo" ><a href="../home/index.html"> FiiConnect</a></div>
+      <div class="header-chats">
+        <img src="../pictures/chat.png" alt="Chats Icon" class="chats-icon">
+        <a href="../chats/index.html">
+        <span>Chats</span>
+      </a>
+      </div>
+      
+    </div>
+    <div class="header-profile">
+      <a href="../profile/index.html">
+      <img src="../pictures/profile-picture.png" alt="Profile Picture"></a>
+    </div>
+  </header>
+
+      <div class="chat-container">
+        <div class="chat-sidebar">
+          <a id="students" class="sidebar-menu-item" onclick="toggleHighlight('students')">Students</a>
+          <div id="students-list" class="content-list">
+            <!-- Student List Content Here -->
+            <ul class="markerless-list">
+              <li>Student 1</li>
+              <li>Student 2</li>
+              <li>Student 3</li>
+              <li>Student 4</li>
+              <li>Student 5</li>
+              <li>Student 6</li>
+            </ul>
+          </div>
+      
+          <a id="teachers" class="sidebar-menu-item" onclick="toggleHighlight('teachers')">Teachers</a>
+          <div id="teachers-list" class="content-list">
+            <!-- Teacher List Content Here -->
+            <ul class="markerless-list">
+              <li>Teacher 1</li>
+              <li>Teacher 2</li>
+              <li>Teacher 3</li>
+              <li>Teacher 4</li>
+              <li>Teacher 5</li>
+              <li>Secretary 1</li>
+            </ul>
+          </div>
+      
+          <a id="classes" class="sidebar-menu-item" onclick="toggleHighlight('classes')">Groups</a>
+          <div id="classes-list" class="content-list">
+            <!-- Class List Content Here -->
+            <ul class="markerless-list">
+              <li>Class 1</li>
+              <li>Class 2</li>
+              <li>Class 3</li>
+              <li>Group 1</li>
+              <li>Group 2</li>
+              <li>Group 3</li>
+            </ul>
+          </div>
+        </div>
+      
+        <script>
+          function toggleHighlight(elementId) {
+            const menuItems = document.getElementsByClassName('sidebar-menu-item');
+            for (let i = 0; i < menuItems.length; i++) {
+              const menuItem = menuItems[i];
+              menuItem.classList.remove('highlight');
+            }
+      
+            const contentLists = document.getElementsByClassName('content-list');
+            for (let i = 0; i < contentLists.length; i++) {
+              const contentList = contentLists[i];
+              contentList.classList.remove('show');
+            }
+      
+            const element = document.getElementById(elementId);
+            element.classList.add('highlight');
+      
+            const targetList = document.getElementById(elementId + '-list');
+            targetList.classList.add('show');
+          }
+        </script>
+        <div class="chat-content">
+          <div class="search-bar">
+            <img src="../pictures/search.png" alt="Search Icon" class="search-icon">
+            <input type="text" placeholder="Search messages">
+          </div>
+          <div class="chat-messages">
+            <div class="message">
+              <div class="message-sender">
+                <img src="../pictures/profile-picture.png" alt="Sender Profile Picture">
+              </div>
+              <div class="message-content">
+                <div class="message-info">
+                  <span class="message-sender-name">John Doe</span>
+                  <span class="message-time">10:30 AM</span>
+                </div>
+                <div class="message-text">
+                  <p>Hello, how are you?</p>
+                </div>
+              </div>
+            </div>
+            <div class="message">
+              <div class="message-sender">
+                <img src="../pictures/profile-picture.png" alt="Sender Profile Picture">
+              </div>
+              <div class="message-content">
+                <div class="message-info">
+                  <span class="message-sender-name">Jane Smith</span>
+                  <span class="message-time">11:05 AM</span>
+                </div>
+                <div class="message-text">
+                  <p>I'm good, thank you!</p>
+                </div>
+              </div>
+            </div>
+            <div class="message message-sent">
+              <div class="message-content message-sent-content">
+                <div class="message-info message-sent-info">
+                  <span class="message-sender-name">Me</span>
+                  <span class="message-time">12:30 PM</span>
+                </div>
+                <div class="message-text message-sent-text">
+                  <p>Hello, this is a message sent by me.</p>
+                </div>
+              </div>
+              <div class="message-sender">
+                <img src="../pictures/profile-picture.png" alt="Sender Profile Picture">
+              </div>
+            </div>  
+            <div class="message">
+              <div class="message-sender">
+                <img src="../pictures/profile-picture.png" alt="Sender Profile Picture">
+              </div>
+              <div class="message-content">
+                <div class="message-info">
+                  <span class="message-sender-name">John Doe</span>
+                  <span class="message-time">12:32 AM</span>
+                </div>
+                <div class="message-text">
+                  <p>Nice! I am proud of you.</p>
+                </div>
+              </div> 
+          </div>
+          <div class="message">
+            <div class="message-sender">
+              <img src="../pictures/profile-picture.png" alt="Sender Profile Picture">
+            </div>
+            <div class="message-content">
+              <div class="message-info">
+                <span class="message-sender-name">Lucy Spawn</span>
+                <span class="message-time">12:32 AM</span>
+              </div>
+              <div class="message-text">
+                <p>Nice! I am proud of you.</p>
+              </div>
+            </div> 
+        </div>
+          <div class="chat-input">
+            <input type="text" placeholder="Type your message">
+            <button>Send</button>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>

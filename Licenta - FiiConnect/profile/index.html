@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FiiConn - University Students</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="header-logo"><a href="../home/index.html">
+        <img src="../pictures/logo.png" alt="Logo" style="width: 27px; height: 27px;">
+    </a>
+      </div>
+      <div class="header-logo" ><a href="../home/index.html"> FiiConnect</a></div>
+      <div class="header-chats">
+        <img src="../pictures/chat.png" alt="Chats Icon" class="chats-icon">
+        <a href="../chats/index.html">
+        <span>Chats</span>
+      </a>
+      </div>
+      
+    </div>
+    <div class="header-profile">
+      <a href="../profile/index.html">
+      <img src="../pictures/profile-picture.png" alt="Profile Picture"></a>
+    </div>
+  </header>
+      <div class="container">
+        <div class="column-left">
+          <div class="profile-picture">
+            <img id="profile-img" src="../pictures/profile-picture.png" alt="Profile Picture">
+            <input type="file" id="upload" name="upload" accept="image/*">
+            <label for="upload" class="change-picture">Change Picture</label>
+          </div>
+          <h2 class="name">John Doe, 3A2</h2>
+          <p class="info">Register number: 12345</p>
+          <p class="info">Email: john.doe@example.com</p>
+          <ul class="actions">
+            <li><strong style="font-size: 15px;">Make a payment</strong></li>
+            <li><strong style="font-size: 15px;">Requests:</strong> <span class="add-request">+</span></li>
+            <ol>
+              <li>Adeverinta de student <span style="color: rgb(4, 177, 36)">(done)</span></li> 
+              <li>Schimbarea optionalului HCI <span style="color: rgb(166, 3, 3)">(rejected)</span></li>
+              <li>Sed do eiusmod tempor incididunt <span style="color: rgb(237, 162, 0)">(in progress)</span></li>
+            </ol>
+          </ul>
+        </div>
+        <div class="column-right">
+            <h2 class="stats-title">Stats:</h2>
+            <form>
+                <label for="semester" class="label">Select Semester:</label>
+                <div class="custom-dropdown">
+                  <select id="semester" name="semester">
+                      <option value="1">1st Semester</option>
+                      <option value="2">2nd Semester</option>
+                      <option value="3">3rd Semester</option>
+                      <option value="4">4th Semester</option>
+                      <option value="5">5th Semester</option>
+                      <option value="6">6th Semester</option>
+                    </select>
+                    </div>
+                  </form>
+                <table class="stats-table">
+                  <tr>
+                    <th class="highlight">Subject</th>
+                    <th class="highlight">Mark</th>
+                    <th class="highlight">Date</th>
+                    <th class="highlight">Credits</th>
+                  </tr>
+                  <tr>
+                    <td>HCI</td>
+                    <td>9</td>
+                    <td>20-05-2023</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <td>RPA</td>
+                    <td>8</td>
+                    <td>29-05-2023</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <td>ACTN</td>
+                    <td>5</td>
+                    <td>31-05-2023</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>CN</td>
+                    <td>9</td>
+                    <td>07-06-2023</td>
+                    <td>4</td>
+                  </tr>
+                </table><br>
+                <h3 class="stats-title">Payments:</h3>
+                <h4 class="stats-title">Payments to be made: </h4>
+                <table class="stats-table">
+                    <tr>
+                      <th class="highlight">Name</th>
+                      <th class="highlight">Price</th>
+                      <th class="highlight">Deadline</th>
+                    </tr>
+                    <tr>
+                      <td>Schooling fee</td>
+                      <td>1800 (lei)</td>
+                      <td>15-05-2023</td>
+                    </tr>
+                    <tr>
+                      <td>Retaking fee (PA - sem. 4)</td>
+                      <td>300</td>
+                      <td>15-05-2023</td>
+                    </tr>
+                  </table><br>
+                <h4 class="stats-title">Payments made:</h4>
+                <table class="stats-table">
+                    <tr>
+                      <th class="highlight">Name</th>
+                      <th class="highlight">Price</th>
+                      <th class="highlight">Date</th>
+                    </tr>
+                    <tr>
+                      <td>Retaking fee (TW - sem. 4)</td>
+                      <td>360</td>
+                      <td>15-05-2023</td>
+                    </tr>
+                    <tr>
+                        <td>Retaking fee (PSGBD - sem. 4)</td>
+                        <td>360</td>
+                        <td>15-05-2023</td>
+                      </tr>
+                  </table><br>
+        </div>
+      </div>
+
+<script>
+  document.getElementById("upload").addEventListener("change", function(e) {
+    var reader = new FileReader();
+    reader.onload = function(event) {
+      document.getElementById("profile-img").src = event.target.result;
+    };
+    reader.readAsDataURL(e.target.files[0]);
+  });
+</script>
+
+</body>
+</html>
